@@ -116,6 +116,15 @@ p {
   font-style: normal;
 }
 
+.wrapper {
+  position: relative;
+  top: 0;
+  height: 0;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
 .star.animate {
   -webkit-animation: bgAnim 2s 1 ease-in;
   animation: bgAnim 9s 1 ease-in;
@@ -354,19 +363,20 @@ p {
   color: #005293;
 }
 
+
 .main-offer {
-  padding: 61px 0px 35px 0;
+  padding: 50px 0px 35px 0;
   overflow: hidden;
 }
 
 .main-offer h1 {
-  font-size: 102px;
-  line-height: 68.57143%;
+  font-size: 109px;
+  /* line-height: 68.57143%; */
   text-align: center;
 }
 
 .main-offer__items {
-  margin: 100px -20px -40px -20px;
+  margin: 100px -20px 0px -20px;
   padding: 0px 48px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -445,6 +455,7 @@ p {
 }
 
 .main-services {
+  /* overflow: hidden; */
   overflow: hidden;
   padding: 75px 0px 107px 0;
   position: relative;
@@ -459,10 +470,11 @@ p {
 
 .main-services__img {
   position: absolute;
-  top: 0%;
+  top: 620px;
   right: -20%;
   width: 800px;
   height: 800px;
+  z-index: 1;
 }
 
 /* .main-services__img:hover {
@@ -639,7 +651,7 @@ p {
 .contacts-offer h1 {
   font-size: 230px;
   /* line-height: 96.58537%; */
-  text-align: justify;
+  text-align: center;
   margin-left: -20px;
 }
 
@@ -1432,6 +1444,7 @@ body._active {
 }
 
 .container {
+  overflow: hidden;
   width: 100%;
   max-width: 1920px;
   margin: 0 auto;
@@ -1440,7 +1453,7 @@ body._active {
 
 @media screen and (max-width: 1600px) {
   .main-services__img {
-    right: -24%;
+    right: -26%;
   }
 
   .services-solutions__img {
@@ -1454,6 +1467,12 @@ body._active {
   .about-content__info-img {
     right: -45%;
     /* top: 200%; */
+  }
+}
+
+@media screen and (max-width: 1330px) {
+  .contacts-offer h1 {
+    font-size: 150px;
   }
 }
 
@@ -1493,9 +1512,7 @@ body._active {
     margin: 60px 0px -40px 0px;
   }
 
-  .contacts-offer h1 {
-    font-size: 150px;
-  }
+
 
   .about-offer h1 {
     font-size: 100px;
@@ -1606,6 +1623,7 @@ body._active {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 48%;
     flex: 0 0 48%;
+    left: 0;
   }
 
   .contacts-content__search-input {
