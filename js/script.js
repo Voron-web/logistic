@@ -225,7 +225,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
     //===========================================================================
 
+    // animation Star
 
+    const star = document.querySelector('.star');
+
+    star.addEventListener('pointermove', startAnimation);
+
+    function startAnimation() {
+        star.classList.add('animate');
+        star.removeEventListener('pointermove', startAnimation);
+        setTimeout(() => {
+            star.classList.remove('animate');
+            star.addEventListener('pointermove', startAnimation);
+        }, 9000);
+    }
 
 
 
