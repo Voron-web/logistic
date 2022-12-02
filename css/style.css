@@ -393,6 +393,10 @@ p {
 
 .main-offer__item-number {
   margin: 0px 10px 0px 0px;
+
+}
+
+.main-offer__item-number a {
   font-weight: 700;
   font-size: 64px;
   line-height: 115.625%;
