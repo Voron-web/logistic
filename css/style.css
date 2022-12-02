@@ -116,6 +116,11 @@ p {
   font-style: normal;
 }
 
+datalist option {
+  background-color: #a0be47;
+  color: red;
+}
+
 .wrapper {
   position: relative;
   top: 0;

@@ -168,15 +168,32 @@
                 </div>
                 <div class="contacts-content__search">
                     <div class="contacts-content__search-input">
-                        <div class="contacts-content__search-header">
+                        <!-- <div class="contacts-content__search-header">
                             <div class="contacts-content__search-text">
                                 Выберите город
                             </div>
                             <div class="contacts-content__search-img">
                                 <img src="./img/icons/arrow.svg" alt="">
                             </div>
-                        </div>
-                        <div class="contacts-content__search-body">
+                        </div> -->
+                        <input list="city" class="contacts-content__search-header" placeholder="Выберите город">
+
+                        <!-- <div class="contacts-content__search-img">
+                            <img src="./img/icons/arrow.svg" alt="">
+                        </div> -->
+                        <!-- </input> -->
+                        <datalist id="city">
+                            <option class="contacts-content__search-body-item" value='Москва'>
+
+                            </option>
+                            <option class="contacts-content__search-body-item" value='Красноярск'>
+
+                            </option>
+                            <option class="contacts-content__search-body-item" value='Новосибирск'>
+
+                            </option>
+                        </datalist>
+                        <!-- <div class="contacts-content__search-body">
                             <div class="contacts-content__search-body-items">
                                 <div class="contacts-content__search-body-item">
                                     Москва
@@ -236,7 +253,7 @@
                                     Казань
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                     <div class="contacts-content__search-items">
                         <div data-coord="Москва" class="contacts-content__search-item">
