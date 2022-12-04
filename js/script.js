@@ -4,8 +4,6 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
-
-
     // Burger
 
     function burgerClick() {
@@ -163,28 +161,109 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function clickContactsSearch() {
-        const search = document.querySelector('.contacts-content__search-header');
-        const searchText = document.querySelector('.contacts-content__search-text');
-        const searchBody = document.querySelector('.contacts-content__search-body');
-        const searchBodyItems = document.querySelectorAll('.contacts-content__search-body-item');
-        const infoItems = document.querySelectorAll('.contacts-content__search-item');
+        const search = document.querySelector('.contacts-content__search-header'); //Поле ввода
+        const searchBody = document.querySelector('.contacts-content__search-body');   //Выпадающий список
+        const searchBodyList = document.querySelector('.contacts-content__search-body-items');   // список городов
+        // const searchBodyItems = document.querySelectorAll('.contacts-content__search-body-item'); //список городов в выпадающем списке
+        const infoItems = document.querySelectorAll('.contacts-content__search-item'); // массив данных города
+        const arrowWrap = document.querySelector('.contacts-content__search-img');
+        const arrowList = document.querySelector('.contacts-content__search-img>img');
 
-        if (search) {
-            infoItems[0].classList.add('_active');
+        let cityListItems = []; //Список объектов городов
+        let cityList = []; //Список городов (string)
+        infoItems.forEach((item) => {
+            cityList.push(item.dataset.coord);
+        })
+        cityList.sort();
 
-            search.addEventListener('click', () => {
-                searchBody.classList.toggle('_active');
-            });
-            for (let index = 0; index < searchBodyItems.length; index++) {
-                const searchBodyItem = searchBodyItems[index];
 
-                searchBodyItem.addEventListener('click', () => {
-                    searchText.textContent = searchBodyItem.textContent;
-                    searchBody.classList.remove('_active');
-                    infoSortItems(infoItems, searchBodyItem);
-                });
+        // Генерация списка городов на странице
+        function ListShow(array) {
+            searchBodyList.innerHTML = '';
+
+            array.forEach((item) => {
+                let li = document.createElement('li');
+                li.classList.add('contacts-content__search-body-item');
+                li.textContent = item;
+                searchBodyList.append(li);
+                cityListItems.push(li);
+            })
+        }
+        ListShow(cityList);
+
+
+        function openList() {
+            searchBody.classList.add('_active');
+            arrowWrap.classList.add('active')
+        }
+
+        function closeList() {
+            searchBody.classList.remove('_active');
+            arrowWrap.classList.remove('active')
+        }
+
+        function searchCity() {
+            searchBodyList.innerHTML = '';
+            if (search.value == '') {
+                ListShow(cityList);
+            }
+            else {
+                let cityListFilter = cityList.filter((item) => {
+                    return (new RegExp(`^${search.value}`, 'ig').test(item));
+                })
+                ListShow(cityListFilter);
             }
         }
+
+
+
+        if (search.value == '') {
+            infoItems[0].classList.add('_active');
+        }
+
+        search.addEventListener('input', () => {
+            openList();
+            searchCity();
+        });
+
+        document.addEventListener('click', (event) => {
+            if (event.target == arrowList || event.target == search) {
+                searchBody.classList.toggle('_active');
+                arrowWrap.classList.toggle('active');
+                search.value = '';
+                setTimeout(() => ListShow(cityList), 500);
+            } else if (cityListItems.find((item) => item == event.target) !== undefined) {
+                closeList();
+                infoSortItems(infoItems, event.target);
+                search.value = event.target.textContent
+            }
+            else {
+                if (searchBody.classList.contains('_active')) {
+                    search.value = '';
+                }
+                closeList();
+                setTimeout(() => ListShow(cityList), 500);
+            }
+        })
+
+        // Старый код выбора города
+
+        // if (search) {
+        //     infoItems[0].classList.add('_active');
+        //     search.addEventListener('focus', () => {
+        //         searchBody.classList.toggle('_active');
+        //     });
+        //     for (let index = 0; index < searchBodyItems.length; index++) {
+        //         const searchBodyItem = searchBodyItems[index];
+
+        //         searchBodyItem.addEventListener('click', () => {
+        //             searchText.textContent = searchBodyItem.textContent;
+        //             searchBody.classList.remove('_active');
+        //             infoSortItems(infoItems, searchBodyItem);
+        //         });
+        //     }
+        // }
+
     }
     clickContactsSearch();
 
@@ -239,14 +318,4 @@ document.addEventListener('DOMContentLoaded', () => {
             star.addEventListener('pointermove', startAnimation);
         }, 9000);
     }
-
-
-
-
-
-
-
-
-
-
 });
