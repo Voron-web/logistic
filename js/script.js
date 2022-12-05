@@ -148,7 +148,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     // Contacts Search Item
-
+    const search = document.querySelector('.contacts-content__search-header'); //Поле ввода
     function infoSortItems(infoItems, searchBodyItem) {
         for (let index = 0; index < infoItems.length; index++) {
             const infoItem = infoItems[index];
@@ -161,7 +161,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function clickContactsSearch() {
-        const search = document.querySelector('.contacts-content__search-header'); //Поле ввода
+
         const searchBody = document.querySelector('.contacts-content__search-body');   //Выпадающий список
         const searchBodyList = document.querySelector('.contacts-content__search-body-items');   // список городов
         // const searchBodyItems = document.querySelectorAll('.contacts-content__search-body-item'); //список городов в выпадающем списке
@@ -265,7 +265,9 @@ document.addEventListener('DOMContentLoaded', () => {
         // }
 
     }
-    clickContactsSearch();
+    if (search) {
+        clickContactsSearch();
+    }
 
     //===========================================================================================
 
