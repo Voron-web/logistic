@@ -1118,9 +1118,10 @@ datalist option {
 }
 
 .about-offer h1 {
-  font-size: 178px;
+  font-size: 186px;
   text-align: center;
   line-height: 150%;
+  white-space: nowrap;
 }
 
 .about-content {
