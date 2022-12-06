@@ -139,7 +139,7 @@ main {
 }
 
 .star.animate {
-  -webkit-animation: bgAnim 2s 1 ease-in;
+  -webkit-animation: bgAnim 9s 1 ease-in;
   animation: bgAnim 9s 1 ease-in;
 }
 
@@ -607,14 +607,16 @@ main {
 
   33.3%,
   40% {
-    /* -webkit-transform: rotate(180deg); */
-    transform: rotate(180deg);
+
+    -webkit-transform: rotate(179.9deg);
+    -moz-transform: rotate(179.9deg);
+    transform: rotate(179.9deg);
   }
 
   66.6%,
   70% {
+    -webkit-transform: scale(0.5) rotate(0deg);
     transform: scale(0.5) rotate(0deg);
-
   }
 
   100% {
