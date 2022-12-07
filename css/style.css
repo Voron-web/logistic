@@ -389,7 +389,7 @@ main {
 }
 
 .main-offer__items {
-  margin: 100px -20px 0px -20px;
+  margin: 64px -20px 0px -20px;
   padding: 0px 48px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -403,7 +403,7 @@ main {
   -webkit-box-flex: 0;
   -ms-flex: 0 0 50%;
   flex: 0 0 50%;
-  margin: 0px 0px 0px 0px;
+  margin: 0px 0px 20px 0px;
 }
 
 .main-offer__wrapp {
@@ -470,7 +470,7 @@ main {
 .main-services {
   /* overflow: hidden; */
   overflow: hidden;
-  padding: 75px 0px 107px 0;
+  padding: 20px 0px 107px 0;
   position: relative;
 }
 
@@ -537,7 +537,7 @@ main {
 }
 
 .services-offer {
-  padding: 17px 0px 35px 0;
+  padding: 28px 0px 0px 0;
   overflow: hidden;
 }
 
@@ -1124,7 +1124,7 @@ main {
 }
 
 .about-offer {
-  padding: 0px 0px 23px 0;
+  padding: 0px 0px 11px 0;
   overflow: hidden;
 }
 
@@ -1221,7 +1221,7 @@ main {
 
 
 .about-content__history {
-  margin: 103px 0px 0px 0px;
+  margin: 90px 0px 0px 0px;
 }
 
 .about-content__history-items {
