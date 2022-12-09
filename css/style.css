@@ -144,7 +144,7 @@ main {
 }
 
 .header {
-  padding: 45px 0px 33px 0;
+  padding: 30px 0px 18px 0;
 }
 
 .header__wrapper {
@@ -157,6 +157,10 @@ main {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
+}
+
+.header__logo {
+  flex: 0 0 220px;
 }
 
 .header__logo a {
@@ -207,6 +211,7 @@ main {
 
 .header__btn {
   cursor: pointer;
+  margin: 15px 0;
   padding: 17px 45px;
   background: transparent;
   border: 2px solid #005293;
@@ -225,6 +230,7 @@ main {
 }
 
 .burger-header {
+  margin: 15px 0;
   display: none;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
@@ -1603,7 +1609,7 @@ body._active {
 
   .main-offer__items {
     padding: 0px 0px;
-    margin: 60px 0px -40px 0px;
+    margin: 60px 0px 0px 0px;
   }
 
 
@@ -1659,11 +1665,28 @@ body._active {
     height: 32px;
   }
 
-  .header__nav ul li {
-    margin: 0px 15px 0px 0px;
+  .header__nav {
+    margin: 0 10px;
   }
 
+  .header__nav ul {
+    justify-content: center;
+  }
+
+  .header__nav ul li {
+    margin: 0px 10px 0px 0px;
+    text-align: center;
+  }
+
+  .header__nav ul li a {
+    font-size: 14px;
+    /* text-align: center; */
+
+  }
+
+
   .header__btn {
+    flex: 0 0 173px;
     padding: 11px 22px;
   }
 
@@ -1751,18 +1774,16 @@ body._active {
 
 @media screen and (max-width: 768px) {
   .header__logo {
-    -webkit-box-flex: 1;
+    /* -webkit-box-flex: 1;
     -ms-flex: 1 0 auto;
-    flex: 1 0 auto;
+    flex: 1 0 auto; */
   }
 
   .header__nav {
     display: none;
   }
 
-  .header__btn {
-    margin: 0px 60px 0px 0px;
-  }
+
 
   .burger-header {
     display: -webkit-box;
@@ -1869,6 +1890,11 @@ body._active {
     padding: 15px 0;
   }
 
+  .header__btn {
+    display: none;
+    margin: 0px 0px 0px 0px;
+  }
+
   .menu-mobile {
     top: 56px;
   }
@@ -1890,7 +1916,7 @@ body._active {
   }
 
   .main-offer__items {
-    margin: 40px 0px -40px 0px;
+    margin: 40px 0px 0px 0px;
   }
 
   .main-offer__item-number {
@@ -2027,11 +2053,11 @@ body._active {
   }
 }
 
-@media screen and (max-width: 514px) {
+/* @media screen and (max-width: 514px) {
   .header__btn {
     margin: 0px 20px 0px 0px;
   }
-}
+} */
 
 @media screen and (max-width: 500px) {
   .about-content__photo-item {
@@ -2042,6 +2068,10 @@ body._active {
 }
 
 @media screen and (max-width: 425px) {
+  .container {
+    padding: 0 20px;
+  }
+
   .header__btn {
     display: none;
     margin: 0px 0px 0px 0px;
@@ -2074,6 +2104,15 @@ body._active {
 }
 
 @media screen and (max-width: 378px) {
+  .main-offer h1 {
+    font-size: 25px;
+  }
+
+  .header__logo a img {
+    width: 170px;
+    object-fit: contain;
+  }
+
   .about-offer h1 {
     font-size: 40px;
   }
