@@ -396,21 +396,35 @@ main {
 
 .main-offer__items {
   margin: 64px -20px 0px -20px;
-  padding: 0px 48px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
+  /* padding: 0px 48px; */
+  /* display: -webkit-box; */
+  /* display: -ms-flexbox; */
+  /* display: flex; */
+  display: grid;
+  /* -ms-flex-wrap: wrap; */
   flex-wrap: wrap;
+  /* justify-content: end; */
+  justify-content: space-between;
+  /* align-items: center; */
+  grid-template-columns: repeat(auto-fill, 625px);
 }
 
 .main-offer__item {
-  padding: 0px 20px;
+  /* padding: 0px 20px; */
+  min-width: 500px;
   -webkit-box-flex: 0;
-  -ms-flex: 0 0 50%;
-  flex: 0 0 50%;
-  margin: 0px 0px 20px 0px;
+  /* -ms-flex: 0 0 50%; */
+  /* flex: 0 0 50%; */
+  /* margin: 0px 0px 20px 0px; */
+  /* justify-self: stretch; */
+  margin: 0px 48px 20px;
+
 }
+
+.main-offer__items :nth-child(2n) {
+  justify-self: flex-end;
+}
+
 
 .main-offer__wrapp {
   height: 100%;
@@ -1534,29 +1548,16 @@ body._active {
   padding: 0px 50px;
 }
 
-
-
-
-
-@media screen and (max-width: 1600px) {
-  .main-services__img {
-    /* right: -26%; */
+@media screen and (min-width: 1600px) {
+  .main-offer h1 {
+    font-size: 131px;
   }
+}
 
-  /* .services-solutions__img {
-    right: -18%;
-  } */
-
-  /* .contacts-content__img {
-    right: -27%;
-  } */
-
-  /* .about-content__info-img {
-    right: -45%;
-    /* top: 200%; */
-  /* } */
-
-
+@media screen and (min-width: 1800px) {
+  .main-offer h1 {
+    font-size: 150px;
+  }
 }
 
 @media screen and (max-width: 1330px) {
@@ -1565,7 +1566,7 @@ body._active {
   }
 
   .main-offer h1 {
-    font-size: 66px;
+    font-size: 85px;
   }
 
   .about-offer h1 {
@@ -1576,6 +1577,9 @@ body._active {
     top: 135px;
   }
 
+  .main-offer__items :nth-child(2n) {
+    justify-self: flex-start;
+  }
 }
 
 @media screen and (max-width: 1110px) {
@@ -1612,6 +1616,9 @@ body._active {
     margin: 60px 0px 0px 0px;
   }
 
+  .main-offer h1 {
+    font-size: 76px;
+  }
 
 
 
@@ -1680,8 +1687,6 @@ body._active {
 
   .header__nav ul li a {
     font-size: 14px;
-    /* text-align: center; */
-
   }
 
 
@@ -1696,6 +1701,14 @@ body._active {
 
   .footer__policy {
     margin: 0px 0px 0px 0px;
+  }
+
+  .main-offer__item {
+    margin: 0 0 20px 0;
+  }
+
+  .main-offer h1 {
+    font-size: 60px;
   }
 
   .main-offer__item-title {
@@ -1768,7 +1781,7 @@ body._active {
 
 @media screen and (max-width: 800px) {
   .main-offer h1 {
-    font-size: 46px;
+    font-size: 55px;
   }
 }
 
@@ -1840,6 +1853,10 @@ body._active {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
+  }
+
+  .main-offer h1 {
+    font-size: 40px;
   }
 
   .footer__nav ul {
