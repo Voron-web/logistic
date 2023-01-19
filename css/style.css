@@ -103,6 +103,32 @@ p {
 }
 
 @font-face {
+  font-family: 'Helvetica';
+  src: url('..//fonts/Helvetica.eot');
+  src: local('Helvetica'),
+    url('..//fonts/Helvetica.eot?#iefix') format('embedded-opentype'),
+    url('..//fonts/Helvetica.woff2') format('woff2'),
+    url('..//fonts/Helvetica.woff') format('woff'),
+    url('..//fonts/Helvetica.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Helvetica';
+  src: url('..//fonts/Helvetica-Bold.eot');
+  src: local('Helvetica Bold'), local('Helvetica-Bold'),
+    url('..//fonts/Helvetica-Bold.eot?#iefix') format('embedded-opentype'),
+    url('..//fonts/Helvetica-Bold.woff2') format('woff2'),
+    url('..//fonts/Helvetica-Bold.woff') format('woff'),
+    url('..//fonts/Helvetica-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* @font-face {
   font-family: "Helvetica";
   src: url("..//fonts/Helvetica.woff"), url("..//fonts/Helvetica.woff2");
   font-weight: 400;
@@ -114,7 +140,7 @@ p {
   src: url("..//fonts/Helvetica-Bold.woff"), url("..//fonts/Helvetica-Bold.woff2");
   font-weight: 700;
   font-style: normal;
-}
+} */
 
 datalist option {
   background-color: #a0be47;
