@@ -598,6 +598,7 @@ main {
 }
 
 .services-offer h1 {
+  display: inherit;
   font-size: 235px;
   line-height: 115.06849%;
   text-align: center;
