@@ -102,6 +102,11 @@ p {
   margin: 0;
 }
 
+h1 {
+  display: inline-block;
+  font-kerning: none;
+  white-space: nowrap;
+}
 
 @font-face {
   font-family: 'Helvetica', sans-serif;
@@ -718,7 +723,7 @@ main {
   font-size: 230px;
   /* line-height: 96.58537%; */
   text-align: center;
-  margin-left: -20px;
+  /* margin-left: -20px; */
 }
 
 .contacts-content {
@@ -1183,7 +1188,6 @@ main {
   font-size: 183px;
   text-align: center;
   line-height: 150%;
-  white-space: nowrap;
 }
 
 .about-content {
