@@ -1596,11 +1596,15 @@ body._active {
   font-size: 100px;
   text-transform: uppercase;
 }
+
 .kazan__subtitle {
   max-width: 312px;
   font-size: 17px;
   text-transform: uppercase;
   line-height: 19.55px;
+}
+.kazan__subtitle_contacts {
+  font-size: 12px;
 }
 .kazan__bg {
   position: absolute;
@@ -1654,6 +1658,7 @@ body._active {
 }
 .kazan__contacts-block p {
   line-height: 13.8px;
+  font-size: 12px;
 }
 .kazan__contacts-block p:first-child {
   margin-bottom: 3px;
