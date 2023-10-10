@@ -228,6 +228,7 @@ main {
 
 .header__nav ul li {
   margin: 0px 29px 0px 0px;
+  text-transform: uppercase;
 }
 
 .header__nav ul li:last-child {
@@ -1591,6 +1592,7 @@ body._active {
   margin-bottom: 60px;
 }
 .kazan__title {
+  margin-left: -9px;
   font-size: 100px;
   text-transform: uppercase;
 }
@@ -1598,7 +1600,7 @@ body._active {
   max-width: 312px;
   font-size: 17px;
   text-transform: uppercase;
-  line-height: normal;
+  line-height: 19.55px;
 }
 .kazan__bg {
   position: absolute;
@@ -1610,7 +1612,7 @@ body._active {
   z-index: -1;
 }
 .kazan__bg img {
-  width: 80%;
+  width: 95%;
 }
 .kazan__content {
   position: relative;
@@ -1623,6 +1625,7 @@ body._active {
 .kazan__description ul {
   margin-top: 5px;
   font-size: 12px;
+  line-height: 13.8px;
 }
 .kazan__description li {
   list-style-type: disc;
@@ -1637,7 +1640,7 @@ body._active {
   font-size: 12px;
   text-transform: uppercase;
   max-width: 250px;
-  line-height: normal;
+  line-height: 13.8px;
 }
 .kazan__contacts {
   padding-bottom: 15px;
@@ -1648,6 +1651,9 @@ body._active {
   align-items: flex-end;
   gap: 76px;
   border-bottom: 1px solid #000;
+}
+.kazan__contacts-block p {
+  line-height: 13.8px;
 }
 .kazan__contacts-block p:first-child {
   margin-bottom: 3px;
@@ -1764,9 +1770,30 @@ body._active {
   .services-solutions__items {
     padding: 0px 0px;
   }
+  .header__nav ul li {
+    margin: 0px 10px 0px 0px;
+    text-align: center;
+  }
+
+  .header__nav ul li a {
+    font-size: 14px;
+  }
 }
 
 @media screen and (max-width: 992px) {
+  .header__nav {
+    display: none;
+  }
+
+  .burger-header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+
+  .menu-mobile .header__nav {
+    display: block;
+  }
   .header__logo a {
     width: 140px;
     height: 32px;
@@ -1778,15 +1805,6 @@ body._active {
 
   .header__nav ul {
     justify-content: center;
-  }
-
-  .header__nav ul li {
-    margin: 0px 10px 0px 0px;
-    text-align: center;
-  }
-
-  .header__nav ul li a {
-    font-size: 14px;
   }
 
   .header__btn {
@@ -1878,6 +1896,7 @@ body._active {
   }
   .kazan__title {
     font-size: 80px;
+    line-height: 115px;
   }
   .kazan__bg {
     top: 0;
@@ -1899,20 +1918,6 @@ body._active {
     /* -webkit-box-flex: 1;
     -ms-flex: 1 0 auto;
     flex: 1 0 auto; */
-  }
-
-  .header__nav {
-    display: none;
-  }
-
-  .burger-header {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-
-  .menu-mobile .header__nav {
-    display: block;
   }
 
   .main-offer__item-number {
@@ -2211,7 +2216,7 @@ body._active {
     max-width: 100%;
   }
   .kazan__bg {
-    top: 100px;
+    top: 150px;
   }
 }
 

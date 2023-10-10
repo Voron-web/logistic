@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 menuMobile.classList.toggle('_active');
             });
 
-            if (document.documentElement.clientWidth <= 768) {
+            if (document.documentElement.clientWidth <= 992) {
                 burger.insertAdjacentElement('afterend', menuMobile);
                 menuMobile.insertAdjacentElement('beforeend', menu);
             }
