@@ -1611,7 +1611,7 @@ body._active {
   text-align: right;
   width: 100%;
   max-width: 1600px;
-  top: -30px;
+  top: -40px;
   right: 0;
   z-index: -1;
 }
@@ -1904,7 +1904,7 @@ body._active {
     line-height: 115px;
   }
   .kazan__bg {
-    top: 0;
+    top: 20px;
   }
   .kazan__contacts {
     flex-direction: column;
@@ -2031,6 +2031,9 @@ body._active {
     -ms-flex: 0 0 100%;
     flex: 0 0 100%;
     margin: 40px 0px 0px 0px;
+  }
+  .kazan__bg {
+    top: 120px;
   }
 }
 
@@ -2221,7 +2224,7 @@ body._active {
     max-width: 100%;
   }
   .kazan__bg {
-    top: 150px;
+    top: 160px;
   }
 }
 
