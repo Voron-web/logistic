@@ -111,13 +111,13 @@ h1 {
 @font-face {
   font-family: "Helvetica";
   font-size: 14px;
-  src: url("/fonts/Helvetica.eot");
+  src: url("../fonts/Helvetica.eot");
   src:
     local("Helvetica"),
-    url("/fonts/Helvetica.eot?#iefix") format("embedded-opentype"),
-    url("/fonts/Helvetica.woff2") format("woff2"),
-    url("/fonts/Helvetica.woff") format("woff"),
-    url("/fonts/Helvetica.ttf") format("truetype");
+    url("../fonts/Helvetica.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/Helvetica.woff2") format("woff2"),
+    url("../fonts/Helvetica.woff") format("woff"),
+    url("../fonts/Helvetica.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
