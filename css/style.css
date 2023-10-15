@@ -115,8 +115,7 @@ h1 {
   src:
     local("Helvetica"),
     url("../fonts/Helvetica.eot?#iefix") format("embedded-opentype"),
-    /* url("../fonts/Helvetica.woff2") format("woff2"), */
-    url("../fonts/Helvetica.woff") format("woff"),
+    /* url("../fonts/Helvetica.woff2") format("woff2"), */ url("../fonts/Helvetica.woff") format("woff"),
     url("../fonts/Helvetica.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
@@ -650,7 +649,6 @@ main {
   }
 } */
 @keyframes bgAnim {
-
   33.3%,
   40% {
     -webkit-transform: rotate(179.9deg);
@@ -830,7 +828,7 @@ main {
   transition: all 0.3s ease;
 }
 
-.contacts-content__wrapper-left form input[type="checkbox"]:checked+label:after {
+.contacts-content__wrapper-left form input[type="checkbox"]:checked + label:after {
   opacity: 1;
 }
 
@@ -1075,11 +1073,13 @@ main {
   -webkit-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   transform: rotate(180deg);
-  background: -webkit-gradient(linear,
-      left top,
-      left bottom,
-      color-stop(32.76%, rgba(255, 255, 255, 0.57)),
-      color-stop(69.83%, #ffffff));
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    color-stop(32.76%, rgba(255, 255, 255, 0.57)),
+    color-stop(69.83%, #ffffff)
+  );
   background: -o-linear-gradient(top, rgba(255, 255, 255, 0.57) 32.76%, #ffffff 69.83%);
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.57) 32.76%, #ffffff 69.83%);
 }
@@ -1092,11 +1092,13 @@ main {
   left: 0;
   width: 100%;
   height: 26px;
-  background: -webkit-gradient(linear,
-      left top,
-      left bottom,
-      from(rgba(255, 255, 255, 0)),
-      color-stop(44.79%, #ffffff));
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(rgba(255, 255, 255, 0)),
+    color-stop(44.79%, #ffffff)
+  );
   background: -o-linear-gradient(top, rgba(255, 255, 255, 0) 0%, #ffffff 44.79%);
   background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #ffffff 44.79%);
 }
@@ -1479,7 +1481,7 @@ main {
   transition: all 0.3s ease;
 }
 
-.modal__form form input[type="checkbox"]:checked+label:after {
+.modal__form form input[type="checkbox"]:checked + label:after {
   opacity: 1;
 }
 
@@ -1594,7 +1596,11 @@ body._active {
 .kazan__subtitle_contacts {
   font-size: 12px;
 }
-
+.kazan__title {
+}
+h1 {
+  font-family: "Helvetica";
+}
 .kazan__bg {
   position: absolute;
   text-align: right;
@@ -1694,6 +1700,11 @@ body._active {
   }
 }
 
+@media screen and (max-width: 1110px) {
+  .kazan__bg {
+    top: 20px;
+  }
+}
 @media screen and (max-width: 1110px) {
   .footer__wrapper {
     padding: 0px 0px 0 0px;
@@ -2234,6 +2245,9 @@ body._active {
 
   .kazan__bg {
     top: 160px;
+  }
+  .kazan__content {
+    gap: 45vw;
   }
 }
 
